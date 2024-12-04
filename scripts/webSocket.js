@@ -1,16 +1,5 @@
 let websocket;
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./scripts/sw.js').then((registration) => {
-            console.log('Service Worker registered with scope:', registration.scope);
-        }).catch((error) => {
-            console.error('Service Worker registration failed:', error);
-        });
-    });
-}
-
-
 document.getElementById("connectButton").addEventListener("click", () => {
     const serverAddressInput = document.getElementById("serverAddress").value;
     const statusElement = document.getElementById("status");
