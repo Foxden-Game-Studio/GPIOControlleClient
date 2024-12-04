@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Connector</title>
+    <link rel="icon" href="/assets/icon.png">
+</head>
+<body>
+    <h1>WebSocket Connector</h1>
+    <label for="serverAddress">Server Address (IP:Port):</label>
+    <input type="text" id="serverAddress" placeholder="e.g., 127.0.0.1:8765" />
+    <button id="connectButton">Connect</button>
+    <button id="disconnectButton" disabled>Disconnect</button>
+    <p id="status">Status: Not connected</p>
+    <label for="LED">LED:</label>
+    <input type="number" id="pinInput" placeholder="LED Pin" disabled>
+    <button id="ledOnButton" disabled>Turn on LED</button>
+    <button id="ledOffButton" disabled>Turn off LED</button>
+    <script src="./scripts/webSocket.js"></script>
+</body>
+</html>
