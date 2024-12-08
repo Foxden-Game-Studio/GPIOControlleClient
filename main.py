@@ -1,5 +1,8 @@
-import webSocket
+import GPIOServer
 
 if __name__ == "__main__":
-    app = webSocket.WebSocketApp()
-    app.getRoot().mainloop()
+    try:
+        app = GPIOServer.GPIOServerApp()
+        app.getRoot().mainloop()
+    except KeyboardInterrupt:
+        print("Terminated by User!")
